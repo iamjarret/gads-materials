@@ -15,7 +15,7 @@
 			<l>Two treatment groups</l>
 			<l focus="1">treatment effect = (mean 1) - (mean 2)</l>
 			<l> </l>
-			<l>Under the assumption of Normalty</l>
+			<l>Under the assumption of Normality</l>
 			<l focus="1">treatment effect ~ t_distribution</l>
 		</codeblock>
 	</codeslide>
@@ -28,7 +28,7 @@
 
 	<slide title="Cross Validation Has No Benchmark">
 		<p>In our first blind experiment we began with a modelled distribution</p>
-		<p>Under normalty two sample means are distributed asymptotically as a t distribution</p>
+		<p>Under normality two sample means are distributed asymptotically as a t distribution</p>
 		<p>An expected distribution allows a researcher to form and test hypotheses</p>
 	</slide>
 
