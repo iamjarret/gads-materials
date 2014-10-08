@@ -14,9 +14,7 @@
 		<codeblock>
 			<l>Two treatment groups</l>
 			<l focus="1">treatment effect = (mean 1) - (mean 2)</l>
-		</codeblock>
-
-		<codeblock>
+			<l> </l>
 			<l>Under the assumption of Normalty</l>
 			<l focus="1">treatment effect ~ t_distribution</l>
 		</codeblock>
