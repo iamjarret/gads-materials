@@ -12,7 +12,7 @@
 			<l>changes current directory to the notebook folder in vagrant</l>
 			<l> </l>
 			<l focus="1">cp ~/vagrant/file2movefromlocaldrive ~/notebooks</l>
-			<l>A file in the ds folder on the local machine can be accessed from within the ds toolbook ~/vagrant folder</l>
+			<l>Moves a file from the local drive into the virtual environ</l>
 		</codeblock>
 
 		<codeblock>
@@ -25,9 +25,36 @@
 			<l>Copies any changes into your local directory from origin repo</l>
 			<l> </l>
 			<l focus="1">git add filetosubmit</l>
-			<l focus="1">git commit -m "Added filetosubmit</l>
+			<l focus="1">git commit -m "Added filetosubmit"</l>
 			<l focus="1">git push origin master</l>
 			<l>Uploads added file to online repo</l>
+		</codeblock>
+	</codeslide>
+
+	<section name="Linear Regression"/>
+
+	<slide title="Framework">
+		<p>Simple linear regression uncovers basic correlations</p>
+		<p>Least squares estimation is sensitive to overfitting and heteroskedasticity</p>
+		<p>Overfitting is the inclusion of extra covariates</p>
+		<p>Heteroskedasticity is the presence of correlation between error terms and means that the iid (independently identically distributed) assumption of linear regression doesn't hold</p>
+		<p>Ridge regression is an alternative linear estimation algorithm that works even in the presence of mild heteroskedasticity</p>
+		<p>Lasso regression is another estimation algorithm that is robust to overfitting</p>
+	</slide>
+
+	<codeslide title="Helpful Functions">
+		<codeblock>
+			<l focus="1">import statsmodels.api as sm</l>
+			<l focus="1">model = sm.ols(y, X)</l>
+			<l focus="1">results = model.fit()</l>
+			<l focus="1">results.summary()</l>
+		</codeblock>
+
+		<codeblock>
+			<l>from sklearn.linear_models import LinearRegression</l>
+			<l>linear_model = LinearRegression(fit_intercept=True)</l>
+			<l>linear_model.fit(X,y)</l>
+			<l focus="1">y_hat = linear_model.predict(X)</l>
 		</codeblock>
 	</codeslide>
 
@@ -35,26 +62,26 @@
 
 	<codeslide title="1-Fold CV: Pseudo Code">
 		<codeblock>
-			<l>Start with a list of potential models saved in a dictionary</l>
+			<l focus="1">1. Start with a list of potential models saved in a dictionary</l>
 			<l indent="1">models = {'model01': ['Infrared02'], 'model02':['ELEV','Infrared02']}</l>
-			<l>Divide data set into test and train subsets</l>
-			<l>On the training subset fit each model</l>
-			<l>Save the mean squared error for each model in a dictionary</l>
-			<l>Sort the dictionary</l>
+			<l focus="1">2. Divide data set into test and train subsets</l>
+			<l focus="1">3. On the training subset fit each model</l>
+			<l focus="1">4. Save the mean squared error for each model in a dictionary</l>
+			<l focus="1">5. Sort the dictionary</l>
 			<l indent="1">results = {'model01': 0.553, 'model02': 0.434}</l>
-			<l>Choose the model with the lowest mean squared error</l>
+			<l focus="1">6. Choose the model with the lowest mean squared error</l>
 		</codeblock>
 	</codeslide>
 
 	<codeslide title="K-Fold CV: Pseudo Code">
 		<codeblock>
-			<l>Start with a list of potential models saved in a dictionary</l>
-			<l>for each k repeat steps 2,3, and 4 above saving the results in a dictionary</l>
-			<l indent="1">results = {'model01':[0.533, 0.513, 0.567], 'model02': [0.475, 0.469, 0.458]}</l>
-			<l>Convert list of mean squared errors into a single value by taking the average</l>
-			<l indent="1">results = {'model01':0.536, 'model02':0.464}</l>
-			<l>Sort the dictionary</l>
-			<l>Choose the model with the lowest average mean squared error</l>
+			<l focus="1">1. Start with a list of potential models saved in a dictionary</l>
+			<l focus="1">2. for each k repeat steps 2, 3, and 4 above saving the results in a list in a dictionary</l>
+			<l indent="1">results = {'model01': [0.533, 0.513, 0.567], 'model02': [0.475, 0.469, 0.458]}</l>
+			<l focus="1">3. Convert list of mean squared errors into a single value by taking the average</l>
+			<l indent="1">results = {'model01': 0.536, 'model02': 0.464}</l>
+			<l focus="1">4. Sort the dictionary</l>
+			<l focus="1">5. Choose the model with the lowest average mean squared error</l>
 		</codeblock>
 	</codeslide>
 
