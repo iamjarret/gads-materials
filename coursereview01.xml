@@ -45,7 +45,7 @@
 	<codeslide title="Helpful Functions">
 		<codeblock>
 			<l focus="1">import statsmodels.api as sm</l>
-			<l focus="1">model = sm.ols(y, X)</l>
+			<l focus="1">model = sm.OLS(y, X)</l>
 			<l focus="1">results = model.fit()</l>
 			<l focus="1">results.summary()</l>
 		</codeblock>
