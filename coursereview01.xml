@@ -1,0 +1,77 @@
+<?xml version="1.0"?>
+<presentation>
+	<info company="Data Science" logo="ga-logo.png"/>
+	
+	<title title= "First Quarter Course Review" date="October 13th, 2014" people="Jarret Petrillo, jarret.petrillo@gmail.com"/>
+
+	<section name="Using the Command Line w/ Git"/>
+
+	<codeslide title="Helpful Commands">
+		<codeblock>
+			<l focus="1">cd ~/notebooks</l>
+			<l>changes current directory to the notebook folder in vagrant</l>
+			<l> </l>
+			<l focus="1">cp ~/vagrant/file2movefromlocaldrive ~/notebooks</l>
+			<l>A file in the ds folder on the local machine can be accessed from within the ds toolbook ~/vagrant folder</l>
+		</codeblock>
+
+		<codeblock>
+			<l>cd ~/notebooks/fall-2014-assignments</l>
+			<l focus="1">git remote add origin https://github.com/gads14-nyc/fall_2014_assignments.git</l>
+			<l>Bookmarks the typed git repo with the tag name "origin"</l>
+			<l>Note: different folders can use the same remote name</l>
+			<l> </l>
+			<l focus="1">git pull origin master</l>
+			<l>Copies any changes into your local directory from origin repo</l>
+			<l> </l>
+			<l focus="1">git add filetosubmit</l>
+			<l focus="1">git commit -m "Added filetosubmit</l>
+			<l focus="1">git push origin master</l>
+			<l>Uploads added file to online repo</l>
+		</codeblock>
+	</codeslide>
+
+	<section name="Covariate Selection Using Cross Validation"/>
+
+	<codeslide title="1-Fold CV: Pseudo Code">
+		<codeblock>
+			<l>Start with a list of potential models saved in a dictionary</l>
+			<l indent="1">models = {'model01': ['Infrared02'], 'model02':['ELEV','Infrared02']}</l>
+			<l>Divide data set into test and train subsets</l>
+			<l>On the training subset fit each model</l>
+			<l>Save the mean squared error for each model in a dictionary</l>
+			<l>Sort the dictionary</l>
+			<l indent="1">results = {'model01': 0.553, 'model02': 0.434}</l>
+			<l>Choose the model with the lowest mean squared error</l>
+		</codeblock>
+	</codeslide>
+
+	<codeslide title="K-Fold CV: Pseudo Code">
+		<codeblock>
+			<l>Start with a list of potential models saved in a dictionary</l>
+			<l>for each k repeat steps 2,3, and 4 above saving the results in a dictionary</l>
+			<l indent="1">results = {'model01':[0.533, 0.513, 0.567], 'model02': [0.475, 0.469, 0.458]}</l>
+			<l>Convert list of mean squared errors into a single value by taking the average</l>
+			<l indent="1">results = {'model01':0.536, 'model02':0.464}</l>
+			<l>Sort the dictionary</l>
+			<l>Choose the model with the lowest average mean squared error</l>
+		</codeblock>
+	</codeslide>
+
+	<codeslide title="Helpful Functions">
+		<codeblock>
+			<l focus="1">from sklearn.cross_validation import KFold</l>
+			<l>Returns a tuple (train, test) of 0/1 vectors</l>
+			<l>data[train] returns training set</l>
+			<l> </l>
+			<l focus="1">from sklearn.metrics import mean_squared_error</l>
+			<l>For two vector inputs returns the mean sqaured error</l>
+		</codeblock>
+		<codeblock>
+			<l>results = {'model01': 0.536, 'model02': 0.464}</l>
+			<l focus="1">sort(results, key=results.get, reverse=True)</l>
+			<l>returns a sorted list from a dictionary</l>
+		</codeblock>
+	</codeslide>
+
+</presentation>
