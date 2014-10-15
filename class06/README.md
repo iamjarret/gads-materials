@@ -36,10 +36,11 @@ Intro to Data Science Class06: Regularization, Dimensionality Reduction
 
 ### Meetups!
 
+* NYC Data Engineering [Ad Personalization at Spotify](http://www.meetup.com/NYC-Data-Engineering/events/212517632/)
 * [DUMBO Tech Breakfast](http://www.meetup.com/DUMBO-Tech-Breakfast/events/205935182/)
 * (Past meetup) NYC Data Science: Using Data for Good: Jake Porway Talk [Video, Slides, and Transcript](http://blog.mortardata.com/post/99997015326/using-data-for-good-jake-porway-talk-video-slides)
 
-### Next class: *Classification, Logistic Regression*
+### Next class: Guest Speaker, & *Classification, Logistic Regression*
 
 #### Optional Reading
 
