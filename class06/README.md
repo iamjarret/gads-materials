@@ -24,8 +24,9 @@ Intro to Data Science Class06: Regularization, Dimensionality Reduction
 * [Lecture Slides](https://github.com/gads14-nyc/fall_2014_lessons/blob/master/06_dimensionality_reduction/class06.pdf) (posted after class meets)
 * [Subset Selection Demo](http://nbviewer.ipython.org/github/gads14-nyc/fall_2014_lessons/blob/master/06_dimensionality_reduction/lab/subset_selection.ipynb))
 * [Regularization Demo](http://nbviewer.ipython.org/github/gads14-nyc/fall_2014_lessons/blob/master/06_dimensionality_reduction/lab/regularization.ipynb)
+* [Regularization Demo 2](http://nbviewer.ipython.org/github/gads14-nyc/fall_2014_lessons/blob/master/06_dimensionality_reduction/lab/regularization2.ipynb)
 * [PCA Demo](http://nbviewer.ipython.org/github/gads14-nyc/fall_2014_lessons/blob/master/06_dimensionality_reduction/lab/)
-* [Lab06 Instructions]()
+
 
 ## Additional Resources
 
