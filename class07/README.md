@@ -32,15 +32,18 @@ Intro to Data Science Class07:
 * Nice example of classification with sklearn from [DataRobot](http://www.datarobot.com/blog/classification-with-scikit-learn/)
 * New version of [Pandas](http://pandas.pydata.org/pandas-docs/version/0.15.0/whatsnew.html)!
 
-
 ## Meetups!
 
 * New York Open Statistical Programming Meetup, Oct. 23 [Hedge Funds’ Use of Alternative, Unstructured Data to Generate Returns](http://www.meetup.com/nyhackr/events/211210392/)
+* New York Python Meetup Group, Weekend Study Groups: 
+  - [Saturday Study Group](http://www.meetup.com/nycpython/events/210214592/)
+  - [Sunday Study Group](http://www.meetup.com/nycpython/events/213665332/)
+ 
 
-### Next class: Bayes!
+### Next class: *Bayes!*
 
 #### Optional Reading
 
-* [Probabilistic Programming and Bayesian Methods for Hackers](http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/tree/master/Chapter1_Introduction/) (long book, bookmark for future reference)
 * Frequentism and Bayesianism: A Practical Introduction, [Part 1](http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/)
 * Paul Graham's, [A Plan for Spam](http://www.paulgraham.com/spam.html)
+* [Probabilistic Programming and Bayesian Methods for Hackers](http://nbviewer.ipython.org/github/CamDavidsonPilon/Probabilistic-Programming-and-Bayesian-Methods-for-Hackers/tree/master/Chapter1_Introduction/) (long book, bookmark for future reference)
