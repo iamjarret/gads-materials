@@ -18,16 +18,19 @@ Intro to Data Science Class08:
 
 ## Homework
 
- [Dataexplor05](https://github.com/gads14-nyc/fall_2014_lessons/blob/master/dataexplor05/)
+* [Dataexplor05](https://github.com/gads14-nyc/fall_2014_lessons/blob/master/dataexplor05/)
+* Dataexplor05 [Starter iPython notebook](https://github.com/gads14-nyc/fall_2014_lessons/blob/master/dataexplor05/dataexplor05_sample.ipynb)
 
 ## Class Materials
 
 * [Lecture Slides](https://github.com/gads14-nyc/fall_2014_lessons/blob/master/08_bayes/class08.pdf) (posted after class meets)
+* [Bayesian Regression Demo](http://nbviewer.ipython.org/github/gads14-nyc/fall_2014_lessons/blob/master/08_bayes/bayes_regression_example.ipynb)
 * [Naive Bayes Demo](http://nbviewer.ipython.org/github/gads14-nyc/fall_2014_lessons/blob/master/08_bayes/lab/naive_bayes.ipynb)
 * [Practice Naive Bayes](http://nbviewer.ipython.org/github/gads14-nyc/fall_2014_lessons/blob/master/08_bayes/lab/naive_bayes_tweets.ipynb)
 
 ## Additional Resources/Links
 
+* [Bayes Rule for Ducks](http://planspace.org/2014/02/23/bayes-rule-for-ducks/)
 * A fairly mathy explanation of [Maximum Liklihood Estimation](https://files.nyu.edu/mrg217/public/mle_introduction1.pdf)
 * Frequentism and Bayesianism: A Practical Introduction, parts 1-4, [Part 1](http://jakevdp.github.io/blog/2014/03/11/frequentism-and-bayesianism-a-practical-intro/)
 
