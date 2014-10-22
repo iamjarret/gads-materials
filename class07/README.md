@@ -1,8 +1,7 @@
-Intro to Data Science Class07: 
+Intro to Data Science Class07: *Classification and Logistic Regression*
 =======
 
 - Announcements/Questions
-- Guest Talk: Jeroen Janssens, "Data Science on the Command Line"
 - Intro to Classification Problems
 - Review Dataexplor04
 - Logistic Regression
@@ -12,6 +11,24 @@ Intro to Data Science Class07:
 * Know how to evaluate classification models
 * Understand theory behind LogisticRegression
 * Know how to use sklearn's LogisticRegression class
+
+## Lab/Practice
+
+#### Three options:
+
+1. Work on Dataexplor04
+2. Extend the model in the Challenger O-ring case to include the "severity index"-- does it improve the model's predictive ability?
+3. Three Class Prediction:
+  - Use the famous iris dataset to train a MultiClass LogisticRegression model
+  - Produce crosstab/confusion matrixes to evaluate your model
+  - Use cross-validation to optimize for the best "C" tuning param
+```
+from sklearn import linear_model, datasets
+iris = datasets.load_iris()
+# Use first two columns (Sepal Width and Length) as preditors
+X = iris.data[:,0:2]
+y = iris.target
+```
 
 ## Homework
 
@@ -23,7 +40,6 @@ Intro to Data Science Class07:
 
 ## Class Materials
 
-* []()
 * [Lecture Slides](https://github.com/gads14-nyc/fall_2014_lessons/blob/master/07_classification/class07.pdf) (posted after class meets)
 * [Logistic Regression Demo](http://nbviewer.ipython.org/github/gads14-nyc/fall_2014_lessons/blob/master/07_classification/lab/logistic_regression.ipynb)
 
