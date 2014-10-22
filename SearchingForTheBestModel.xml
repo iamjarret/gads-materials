@@ -12,8 +12,6 @@
 
 	<imageslide title="Derivative models that start with good features do well" image='modelsubsets2.png'/>
 
-	<imagesslide title="Derivative models that start with good features do well" image='modelsubsets3.png'/>
-
 	<codeslide title="Pseudo Code: Naive Model Search Algorithm">
 		<codeblock>
 			<l focus="1">1. Start with a list of features</l>
@@ -23,6 +21,8 @@
 			<l focus="1">5. Choose the model with the lowest mean squared error</l>
 		</codeblock>
 	</codeslide>
+
+	<imageslide title="Iteratively select features" image="modelsubsets3.png"/>
 
 	<codeslide title="Pseudo Code: Iterative Search Algorithm">
 		<codeblock>
@@ -39,7 +39,7 @@
 			<l focus="1">Repeat!</l>
 			<l focus="1">Stop when the MSE gets worse with any added feature</l>
 		</codeblock>
-	</codeslide>
+	</codeslide>	
 
 	<imageslide title="Performs almost as well as naive method!" image='modelsearch.png'/>
 </presentation>
