@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>   The Washington Arch, New York
+NYPL Digital Collections</title>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>
+  // (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  // (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  // m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  // })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  // ga('create', 'UA-1420324-116', 'nypl.org');
+  // ga('send', 'pageview');
+
+  var _gaq = _gaq || [];
+  var pluginUrl = '//www.google-analytics.com/plugins/ga/inpage_linkid.js';
+  _gaq.push(['_require', 'inpage_linkid', pluginUrl]);
+  _gaq.push(['_setAccount', 'UA-1420324-116']);
+  _gaq.push(['_setDomainName', 'nypl.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+	<link href="/assets/application-3db14b2facdefe774e7f85ebcc727c99.css" media="all" rel="stylesheet" type="text/css" />
+	<script src="/assets/application-67f73e7ac2c5aee3d717baa22f7272fa.js" type="text/javascript"></script>
+	<meta content="authenticity_token" name="csrf-param" />
+<meta content="C+P9AqHuLHowZcI+ue62rNLaLSoNksXxZEjAjY7NKHQ=" name="csrf-token" />
+
+		<link href="/assets/items-2b51d332ac323c703f3c0115bd3da9dc.css" media="all" rel="stylesheet" type="text/css" />
+	<script src="/assets/items-15bbec38d8cf532ec3bbcf888a772b3d.js" type="text/javascript"></script>
+
+<!-- social media "cards" -->
+<meta property="og:image" content="http://images.nypl.org/index.php?id=96672&amp;t=w" />
+<meta property="og:title" content="The Washington Arch, New York" />
+<meta property="og:description" content="One of over 700,000 free digital items from The New York Public Library." />
+<meta property="og:url" content="http://digitalcollections.nypl.org/items/510d47d9-af24-a3d9-e040-e00a18064a99" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="NYPL Digital Collections"/>
+
+<link rel="image_src" href="http://images.nypl.org/index.php?id=96672&amp;t=w" />
+
+<meta name="twitter:url" content="http://digitalcollections.nypl.org/items/510d47d9-af24-a3d9-e040-e00a18064a99">
+<meta name="twitter:title" content="The Washington Arch, New York">
+<meta name="twitter:description" content="One of over 700,000 free digital items from The New York Public Library.">
+<meta name="twitter:card" content="photo">
+<meta name="twitter:image:src" content="http://images.nypl.org/?id=96672&amp;t=w">
+<meta name="twitter:creator" content="@nypl">
+<!-- /social media "cards" -->
+
+
+<script type="text/javascript">var NREUMQ=NREUMQ||[];NREUMQ.push(["mark","firstbyte",new Date().getTime()]);</script></head>
+<body class="items index">
+
+<script>
+// assumes jquery
+$(function() {
+	var menuOn = false;
+	var searchOn = false;
+
+	$(document).mouseup(
+		function (e) {
+			var container = $("#nypl-search-top");
+			var container2 = $("#nypl-navbar > li.search");
+
+			if (searchOn && container.has(e.target).length === 0 && container2.has(e.target).length === 0) {
+				searchOn = false;
+				container.removeClass("visible");
+			}
+
+			container = $("#nypl-header");
+
+			if (menuOn && container.has(e.target).length === 0) {
+				menuOn = false;
+				$("#nypl-navbar > li").removeClass("visible");
+			}
+		}
+	);
+
+	$("#nypl-search-toggle").click(
+		function() {
+			var c = $("#nypl-search-top");
+			if (searchOn) {
+				searchOn = false;
+				c.removeClass("visible");
+			} else {
+				searchOn = true;
+				c.addClass("visible");
+			}
+			return false;
+		}
+	);
+
+	$("#nypl-menu-toggle").click(
+		function() {
+			var c = $("#nypl-navbar > li");
+			if (menuOn) {
+				menuOn = false;
+				c.removeClass("visible");
+			} else {
+				menuOn = true;
+				c.addClass("visible");
+				// $("#nypl-search-top").show();
+			}
+			return false;
+		}
+	);
+
+	$("#nypl-search-button-catalog").click(
+		function() {
+			$("#nypl-search-q").val($("#search-block-form-input").val());
+			$("#nypl-search-block-form").attr("action", "http://nypl.bibliocommons.com/search");
+
+			_gaq.push(['_trackEvent', 'Outbound Links', 'NYPL footer link', 'NYPL search catalog'])
+
+			$("#nypl-search-block-form").submit();
+			return false;
+		}
+	);
+
+	$("#nypl-search-button-nypl").click(
+		function() {
+			$("#nypl-search-block-form").attr("action", "http://www.nypl.org/search/apachesolr_search/" + $("#search-block-form-input").val());
+			$("#nypl-search-block-form").attr("method", "post");
+
+			_gaq.push(['_trackEvent', 'Outbound Links', 'NYPL footer link', 'NYPL search site'])
+
+			$("#nypl-search-block-form").submit();
+			return false;
+		}
+	);
+
+	// delayed hover
+	var _id = 0;
+	var _time = 500; // ms
+	$("#nypl-navbar > li").hover(
+		function (e) {
+			// mouseover
+			_id = setInterval(
+				function () {
+					clearInterval(_id);
+					$(e.currentTarget).find("div").first().addClass("show");
+				}
+				, _time
+			);
+		}
+		, function (e) {
+			// mouseout
+			$(e.currentTarget).find("div").first().removeClass("show");
+			if (_id != 0) {
+				clearInterval(_id);
+			}
+		}
+	)
+
+});
+</script>
+
+<div id="nypl-header">
+	<ul id="nypl-navbar">
+		<li class="home"><a href="http://www.nypl.org" title="Go to the home page"><span>The New York Public Library</span></a></li>
+		<li><a href="http://nypl.bibliocommons.com/dashboard/user_dashboard"><span>My NYPL</span></a>
+			<div class="my-nypl">
+				<ul>
+					<li><h5>My Borrowing</h5>
+						<ul>
+							<li><a href="http://nypl.bibliocommons.com/checkedout" title="">Checked Out</a></li>
+							<li><a href="http://nypl.bibliocommons.com/holds/index/active" title="">Holds</a></li>
+							<li><a href="http://nypl.bibliocommons.com/fines" title="">Fines</a></li>
+							<li class="last"><a href="http://nypl.bibliocommons.com/accountmessages" title="">Library Messages</a></li>
+						</ul>
+					</li>
+					<li><h5>My Shelves</h5>
+						<ul>
+							<li><a href="http://nypl.bibliocommons.com/collection/show/my/library/completed" title="">Completed</a></li>
+							<li><a href="http://nypl.bibliocommons.com/collection/show/my/library/in_progress" title="">In progress</a></li>
+							<li><a href="http://nypl.bibliocommons.com/collection/show/my/library/for_later" title="">For later</a></li>
+							<li class="last"><a href="http://nypl.bibliocommons.com/lists/show/mine" title="">My Lists</a></li>
+						</ul>
+					</li>
+					<li><h5>My Community</h5>
+						<ul>
+							<li><a href="http://nypl.bibliocommons.com/trustedsources" title="">I'm Following</a></li>
+							<li><a href="http://nypl.bibliocommons.com/ignoredusers" title="">Ignored Users</a></li>
+							<li><a href="http://nypl.bibliocommons.com/recently_shared" title="">Recently Shared</a></li>
+							<li class="last"><a href="http://nypl.bibliocommons.com/messages" title="">Inbox</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="http://nypl.bibliocommons.com/dashboard"><span>Explore</span></a>
+			<div class="explore">
+				<ul>
+					<li><h5>New &amp; Notable</h5>
+						<ul>
+							<li><a href="http://nypl.bibliocommons.com/dashboard" title="">Recent Activity</a></li>
+							<li><a href="http://nypl.bibliocommons.com/explore/index/newly_acquired?f_on_order=false" title="">New Titles</a></li>
+							<li><a href="http://nypl.bibliocommons.com/explore/index/awards" title="">Award Winners</a></li>
+							<li><a href="http://nypl.bibliocommons.com/explore/index/best_sellers" title="">Bestsellers</a></li>
+							<li><a href="http://nypl-src-kids.bibliocommons.com/" title="">Kids Summer Reading Club 2012</a></li>
+							<li><a href="http://nypl-src-teens.bibliocommons.com/" title="">Teen Summer Reading 2012</a></li>
+							<li class="last"><a href="http://nypl-src-adults.bibliocommons.com/" title="">Adult Summer Reading 2012</a></li>
+						</ul>
+					</li>
+					<li><h5>Collections</h5>
+						<ul>
+							<li><a href="http://nypl.bibliocommons.com/search?q=books&amp;t=smart&amp;search_category=keyword&amp;title=Books" title="">Books</a></li>
+							<li><a href="http://www.nypl.org/ebooks" title="">E-books &amp; Audiobooks</a></li>
+							<li><a href="http://nypl.bibliocommons.com/search?q=movies&amp;t=smart&amp;search_category=keyword&amp;title=Movies" title="">Movies</a></li>
+							<li><a href="http://nypl.bibliocommons.com/search?t=smart&amp;search_category=keyword&amp;q=music&amp;commit=Search&amp;searchOpt=catalogue&amp;title=Music+and+R" title="">Music &amp; Recordings</a></li>
+							<li><a href="http://nypl.bibliocommons.com/search?t=smart&amp;search_category=keyword&amp;q=periodicals&amp;commit=Search&amp;searchOpt=catalogue" title="">Periodicals</a></li>
+							<li><a href="http://digitalgallery.nypl.org/" title="">Images</a></li>
+							<li class="last"><a href="http://www.nypl.org/collections/nypl-collections/braille-talking-books" title="">Braille &amp; Talking Books</a></li>
+						</ul>
+					</li>
+					<li><h5>Made at NYPL</h5>
+						<ul>
+							<li><a href="http://www.nypl.org/blog" title="">Blogs</a></li>
+							<li><a href="http://www.nypl.org/voices/audio-video" title="">Audio &amp; Video</a></li>
+							<li class="last"><a href="http://www.nypl.org/voices/print-publications" title="">Print Publications</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="http://www.nypl.org/collections"><span>Research</span></a>
+			<div class="research">
+				<ul>
+					<li><h5>Electronic Resources</h5>
+						<ul>
+							<li><a href="http://www.nypl.org/collections/articles-databases" title="">Articles and Databases</a></li>
+							<li><a href="http://www.nypl.org/events/online-exhibitions" title="">Online Exhibitions</a></li>
+							<li><a href="http://digitalgallery.nypl.org/" title="">Digital Gallery</a></li>
+							<li><a href="http://www.nypl.org/collections/labs" title="">NYPL Labs</a></li>
+							<li class="last"><a href="http://www.nypl.org/online_projects" title="Digital Projects">Digital Projects</a></li>
+						</ul>
+					</li>
+					<li><h5>Tools and Services</h5>
+						<ul>
+							<li><a href="http://catalog.nypl.org/" title="">Classic Catalog</a></li>
+							<li><a href="http://www.nypl.org/collections/nypl-recommendations/guides" title="">Research Guides</a></li>
+							<li><a href="http://www.nypl.org/specialindexes" title="">Indexes to NYPL Collections</a></li>
+							<li><a href="http://www.nypl.org/ask-nypl/research-questions-reproductions" title="">Get Copies</a></li>
+							<li class="last"><a href="http://www.nypl.org/collections/nypl-recommendations" title="">NYPL Recommendations</a></li>
+						</ul>
+					</li>
+					<li><h5>Collections</h5>
+						<ul>
+							<li><a href="http://www.nypl.org/research-collections" title="">Research Collections</a></li>
+							<li><a href="http://www.nypl.org/find-archival-materials" title="">Manuscripts and Archives</a></li>
+							<li><a href="http://wallachprintsandphotos.nypl.org/" title="">Prints &amp; Photos Online Catalog</a></li>
+							<li class="last"><a href="http://www.nypl.org/collections/nypl-collections/preservation-division" title="">Preservation of NYPL Collections</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="http://www.nypl.org/help"><span>Using the Library</span></a>
+			<div class="using-the-library">
+				<ul>
+					<li><h5>Get Oriented</h5>
+						<ul>
+							<li><a href="http://www.nypl.org/help/library-card" title="">Get a Library Card</a></li>
+							<li><a href="http://www.nypl.org/help/borrowing-materials" title="">Borrowing</a></li>
+							<li><a href="http://www.nypl.org/help/finding-things" title="">How To Find Things</a></li>
+							<li><a href="http://www.nypl.org/help/computers-internet-and-wireless-access" title="">Computers</a></li>
+							<li><a href="http://www.nypl.org/help/community-outreach/services-for-persons-with-disabilities" title="">Accessibility</a></li>
+							<li><a href="http://www.nypl.org/help/about-nypl" title="">About the NYPL</a></li>
+							<li class="last"><a href="http://www.nypl.org/voices/connect-nypl" title="">Connect with NYPL</a></li>
+						</ul>
+					</li>
+					<li><h5>Services</h5>
+						<ul>
+							<li><a href="http://nypl.org/ask-nypl" title="">AskNYPL</a></li>
+							<li><a href="http://www.nypl.org/help/computers-internet-and-wireless-access/reserving-computer" title="">Reserve a PC</a></li>
+							<li><a href="http://www.nypl.org/help/community-outreach" title="">Community Outreach</a></li>
+							<li><a href="http://www.nypl.org/ask-nypl/research-questions-reproductions" title="">Get Copies</a></li>
+							<li><a href="http://www.nypl.org/help/research-services/interlibrary-loan" title="Interlibrary Loan">Interlibrary Loan</a></li>
+							<li><a href="http://www.nypl.org/spacerental" title="">Space Rental</a></li>
+							<li class="last"><a href="http://shop.nypl.org/" title="">The Library Shop</a></li>
+						</ul>
+					</li>
+					<li><h5>I am a...</h5>
+						<ul>
+							<li><a href="http://www.nypl.org/events/teaching-learning" title="">Teacher</a></li>
+							<li><a href="http://www.nypl.org/help/getting-oriented/for-job-seekers" title="">Job Seeker</a></li>
+							<li><a href="http://smallbiz.nypl.org/" title="">Small Business Owner</a></li>
+							<li><a href="http://www.nypl.org/help/getting-oriented/resources-kids" title="">Child</a></li>
+							<li><a href="http://www.nypl.org/help/getting-oriented/resources-teens" title="">Teen</a></li>
+							<li><a href="http://www.nypl.org/help/community-outreach/services-for-persons-with-disabilities" title="">Person with a Disability</a></li>
+							<li><a href="http://www.nypl.org/help/community-outreach/immigrant-services" title="">Recent Immigrant</a></li>
+							<li class="last"><a href="http://nypl.org/support" title="">NYPL Donor</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="http://www.nypl.org/locations"><span>Locations</span></a>
+			<div>
+				<ul class="simple">
+					<li><a href="http://www.nypl.org/locations#manhattan-list" title="">Manhattan</a></li>
+					<li><a href="http://www.nypl.org/locations#bronx-list" title="">The Bronx</a></li>
+					<li><a href="http://www.nypl.org/locations#statenisland-list" title="">Staten Island</a></li>
+					<li><a href="http://www.nypl.org/locations#research-list" title="">Research Libraries</a></li>
+					<li class="last"><a href="http://www.nypl.org/help/getting-oriented/brooklyn-queens-libraries" title="Brooklyn and Queens Libraries">Brooklyn &amp; Queens</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="http://www.nypl.org/events"><span>Classes &amp; Events</span></a>
+			<div>
+				<ul class="simple">
+					<li><a href="http://www.nypl.org/events/exhibitions" title="">Current Exhibitions</a></li>
+					<li><a href="http://www.nypl.org/events/public-programs" title="">Programs</a></li>
+					<li><a href="http://www.nypl.org/events/classes" title="">Classes</a></li>
+					<li><a href="http://www.nypl.org/events/classes/adult-learning-centers" title="">Learn English</a></li>
+					<li><a href="http://www.nypl.org/events/tours" title="">Tours</a></li>
+					<li><a href="http://www.nypl.org/events/exhibitions-past" title="">Past Exhibitions</a></li>
+					<li class="last"><a href="http://www.nypl.org/events/live-nypl" title="">LIVE from the NYPL</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="http://www.nypl.org/support"><span>Support the Library</span></a>
+			<div class="support-the-library">
+				<ul class="simple">
+					<li><a href="http://nypl.org/donate" title="">Donate</a></li>
+					<li><a href="http://www.nypl.org/support/membership" title="">Membership</a></li>
+					<li><a href="http://www.nypl.org/help/about-nypl/volunteer-nypl" title="">Volunteer</a></li>
+					<li><a href="http://www.nypl.org/honorandmemorial" title="Honor and Memorial Gifts">Honor and Memorial Gifts</a></li>
+					<li><a href="http://www.nypl.org/support/benefit-events" title="">Benefit Events</a></li>
+					<li><a href="http://www.nypl.org/support/planned-giving" title="">Planned Giving</a></li>
+					<li><a href="http://shop.nypl.org/" title="">Shop</a></li>
+					<li class="last"><a href="http://www.nypl.org/support/donate" title="">More Ways to Give</a></li>
+				</ul>
+			</div>
+		</li>
+		<li><a href="http://www.nypl.org/ask-nypl"><span>Help</span></a></li>
+		
+		<!-- search -->
+		<li class="search">
+			<a href="#" id="nypl-search-toggle" title="search NYPL.org"><span>Search</span></a>
+		</li>
+		<!-- /search -->
+	</ul>
+	<div id="nypl-search-top">
+		<form action="http://www.nypl.org/" accept-charset="UTF-8" method="get" id="nypl-search-block-form">
+			<input id="nypl-search-q" name="q" type="hidden" value="">
+			<input id="nypl-search-t" name="t" type="hidden" value="smart">
+			<input id="nypl-search-searchOpt" name="searchOpt" type="hidden" value="catalogue">
+			<input class="form-text" maxlength="128" id="search-block-form-input" name="search_block_form" type="text" placeholder="Find books, music, movies, and more">
+			<input alt="search catalog" id="nypl-search-button-catalog" class="catalog_button" name="commit" title="search catalog" type="button" value="Catalog">
+			<input alt="search NYPL.org" id="nypl-search-button-nypl" class="nypl_button" name="commit" title="search NYPL.org" type="button" value="NYPL.org">
+		</form>
+	</div>
+	<a href="#" id="nypl-menu-toggle">M</a>
+</div>
+
+<div id="container">
+
+
+<script>
+$(document).ready(function() {
+    $('.textfield').keydown(function(e) {
+        if (e.keyCode == 13) {
+            this.form.submit();
+            return false;
+         }
+    });
+});
+</script>
+
+<div id="subhead-wrapper">
+  <div id="subhead">
+  	<ul id="subnav">
+  		<li>
+  		  <h2>
+    		  <a href="http://digitalcollections.nypl.org/">
+            NYPL<span>Digital</span> Collections<sup>BETA</sup>
+</a>  		  </h2>
+  		</li>
+  		<!-- <li><a href="#">My Favorites (0)</a></li> -->
+  	</ul>
+  		<form accept-charset="UTF-8" action="/search/index" class="controls" method="get"><div style="margin:0;padding:0;display:inline"><input name="utf8" type="hidden" value="&#x2713;" /></div>
+  		<div class="controls search-input">
+  			<input class="textfield" id="frm-search-textfield" name="keywords" placeholder="Search keyword(s)" type="text" />
+  			<button type="submit" id="frm-search-button" class="button"></button>
+  		</div>		
+</form>  </div>
+</div>
+
+
+
+	<div class="item-wrapper">
+</div>
+		
+	<div id="actions-wrapper">
+  
+	<div id="actions" class="item-wrapper">
+		<ul>
+				<li class="zoom in"><a href="javascript:void(0);">Zoom</a></li>
+				<li class="rotate"> <a href="javascript:void(0);" class="cw">Rotate</a></li>
+			<li class="share"><a href="?reveal=share">Share</a></li>
+				<li class="buy"><a href="?reveal=buy">Buy</a></li>
+			<li class="print"><a href="javascript:;">Print</a></li>
+		</ul>
+
+		<div id="action-box-buy" class="action-box">
+			<a href="?reveal=" class="close">Close</a>
+			<div class="content">
+				<p>Image ID <strong>96672</strong> may be purchased in print and digital forms:</p>
+				<p><a href="http://www.nypl.org/permissions">Order or license a high-resolution digital file (TIFF format)</a>.</p>
+				<p><a href="http://www.nypl.org/help/get-what-you-need/photographic-services/original-photography">Purchase an 8 x 10 inch or larger decorative print</a>.</p>
+
+
+			</div>
+		</div>
+
+		<div id="action-box-share" class="action-box">
+			<a href="?reveal=" class="close">Close</a>
+			<div class="content">
+				<div class="url">
+					Copy the URL to your clipboard using CTRL+C (Win) or ⌘+C (Mac):
+					<br /><input type="text" value="http://digitalcollections.nypl.org/items/510d47d9-af24-a3d9-e040-e00a18064a99" />
+				</div>
+	<div class="social">
+	<a href="https://twitter.com/share?url=http%3A%2F%2Fdigitalcollections.nypl.org%2Fitems%2F510d47d9-af24-a3d9-e040-e00a18064a99&amp;text=The+Washington+Arch%2C+New+York+From+%40nypl+digital+collections." class="icon" target="_blank" title="Share on Twitter">T</a>
+	<a href="http://www.facebook.com/sharer.php?u=http%3A%2F%2Fdigitalcollections.nypl.org%2Fitems%2F510d47d9-af24-a3d9-e040-e00a18064a99&amp;t=The+Washington+Arch%2C+New+York+From+New+York+Public+Library+Digital+Collections." class="icon" target="_blank" title="Share on Facebook">F</a>
+	<a href="http://pinterest.com/pin/create/button/?url=http%3A%2F%2Fdigitalcollections.nypl.org%2Fitems%2F510d47d9-af24-a3d9-e040-e00a18064a99&amp;media=http%3A%2F%2Fimages.nypl.org%2Findex.php%3Fid%3D96672%26t%3Dt&amp;description=The+Washington+Arch%2C+New+York+From+New+York+Public+Library+Digital+Collections." class="icon" target="_blank" title="Pin it!">P</a>
+</div>
+
+			</div>
+		</div>
+
+	</div>
+</div>
+
+	
+	<div id="item-image-wrapper">
+  
+	
+<div class="" data-captures="null" id="deepzoom"></div>
+<div id="deepzoom-custom-controls-ul-holder" class="deepzoom-custom-controls-holder">
+	<a href="javascript:void(0);" id="deepzoom-custom-control-zoom-in">+</a>
+	<a href="javascript:void(0);" id="deepzoom-custom-control-home">o</a>
+	<a href="javascript:void(0);" id="deepzoom-custom-control-zoom-out">-</a>
+	<a href="javascript:void(0);" id="deepzoom-custom-control-fullscreen">^</a>
+		<div id="deepzoom-custom-control-scroll">
+			<input type="checkbox" id="deepzoom-custom-control-scroll-checkbox"/>
+			<label for="deepzoom-custom-control-scroll-checkbox">Scrollwheel Zoom</label>
+		</div>
+	<div id="deepzoom-metadata"></div>
+</div>
+
+<div id="deepzoom-custom-controls-ur-holder" class="deepzoom-custom-controls-holder"></div>
+<div id="deepzoom-custom-controls-dl-holder" class="deepzoom-custom-controls-holder">
+	<a href="javascript:void(0);" id="deepzoom-custom-control-previous"><span>previous</span></a>
+</div>
+<div id="deepzoom-custom-controls-dr-holder" class="deepzoom-custom-controls-holder">
+	<a href="javascript:void(0);" id="deepzoom-custom-control-next"><span>next</span></a>
+</div>
+
+
+	<div id="item-image" class="item-wrapper item-type-still image">
+			<div class="bigimage"><img alt="Index" class="current" data-item="{&quot;id&quot;:&quot;510d47d9-af24-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-af24-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=96672&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=96672&amp;t=w&quot;,&quot;title&quot;:&quot;The Washington Arch, New York&quot;,&quot;index&quot;:0,&quot;image_id&quot;:&quot;96672&quot;}" src="http://images.nypl.org/index.php?id=96672&amp;t=w" /></div>
+
+  </div>
+</div>
+
+
+
+		
+	<div id="item-wrapper" class="item-wrapper">
+		<h1>The Washington Arch, New York</h1>
+			<h6>Image ID: <span id="image-id-wrapper">96672</span></h6>
+		<div id="collections-wrapper">
+			<div id="collections">
+
+		<h2>See More</h2>
+
+
+			<h3><a href="/search/index?filters%5Btitle_uuid_s%5D%5B%5D=(Published photographs)%7C%7C41f2bdb0-c617-012f-3e66-58d385a7bc34&amp;keywords=&amp;layout=false">(Published photographs)</a></h3>
+
+			
+<div class="carousel-widget-wrapper">
+	<div id="container-carousel" class="carousel-widget" data-items="{&quot;items&quot;:[{&quot;id&quot;:&quot;510d47d9-ad4b-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad4b-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93423&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93423&amp;t=w&quot;,&quot;title&quot;:&quot;A View on Castle Hill, Lincoln, England&quot;,&quot;index&quot;:0,&quot;image_id&quot;:&quot;93423&quot;},{&quot;id&quot;:&quot;510d47d9-ad4c-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad4c-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93424&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93424&amp;t=w&quot;,&quot;title&quot;:&quot;Shakespeare&#x27;s Birthplace&quot;,&quot;index&quot;:1,&quot;image_id&quot;:&quot;93424&quot;},{&quot;id&quot;:&quot;510d47d9-ad4d-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad4d-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93425&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93425&amp;t=w&quot;,&quot;title&quot;:&quot;Log House, East Downingtown, Pennsylvania&quot;,&quot;index&quot;:2,&quot;image_id&quot;:&quot;93425&quot;},{&quot;id&quot;:&quot;510d47d9-ad4e-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad4e-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93426&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93426&amp;t=w&quot;,&quot;title&quot;:&quot;Log Cabin Near Darby, Pennsylvania&quot;,&quot;index&quot;:3,&quot;image_id&quot;:&quot;93426&quot;},{&quot;id&quot;:&quot;510d47d9-ad50-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad50-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93427&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93427&amp;t=w&quot;,&quot;title&quot;:&quot;The Norton House, Guilford, Connecticut.&quot;,&quot;index&quot;:4,&quot;image_id&quot;:&quot;93427&quot;},{&quot;id&quot;:&quot;510d47d9-ad51-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad51-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93428&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93428&amp;t=w&quot;,&quot;title&quot;:&quot;First Moravian School in Pennsylvania, 1742&quot;,&quot;index&quot;:5,&quot;image_id&quot;:&quot;93428&quot;},{&quot;id&quot;:&quot;510d47d9-ad52-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad52-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93429&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93429&amp;t=w&quot;,&quot;title&quot;:&quot;Old House on Mill Island Near Bergen Beach, Long Island&quot;,&quot;index&quot;:6,&quot;image_id&quot;:&quot;93429&quot;},{&quot;id&quot;:&quot;510d47d9-ad53-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad53-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93430&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93430&amp;t=w&quot;,&quot;title&quot;:&quot;The Cathedral, City of Mexico&quot;,&quot;index&quot;:7,&quot;image_id&quot;:&quot;93430&quot;},{&quot;id&quot;:&quot;510d47d9-ad54-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad54-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93431&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93431&amp;t=w&quot;,&quot;title&quot;:&quot;The Cathedral, City of Mexico&quot;,&quot;index&quot;:8,&quot;image_id&quot;:&quot;93431&quot;},{&quot;id&quot;:&quot;510d47d9-ad56-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad56-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93433&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93433&amp;t=w&quot;,&quot;title&quot;:&quot;Altar of the Church of San Sebastian Y Santa Prisca&quot;,&quot;index&quot;:9,&quot;image_id&quot;:&quot;93433&quot;},{&quot;id&quot;:&quot;510d47d9-ad55-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad55-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93432&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93432&amp;t=w&quot;,&quot;title&quot;:&quot;Altar of the Church of San Sebastian Y Santa Prisca&quot;,&quot;index&quot;:10,&quot;image_id&quot;:&quot;93432&quot;},{&quot;id&quot;:&quot;510d47d9-ad57-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad57-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=99047&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=99047&amp;t=w&quot;,&quot;title&quot;:&quot;The Courtyard of the Casa De Los Azulejos, Mexico&quot;,&quot;index&quot;:11,&quot;image_id&quot;:&quot;99047&quot;},{&quot;id&quot;:&quot;510d47d9-ad58-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad58-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93434&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93434&amp;t=w&quot;,&quot;title&quot;:&quot;A Bit of Old St. Augustine&quot;,&quot;index&quot;:12,&quot;image_id&quot;:&quot;93434&quot;},{&quot;id&quot;:&quot;510d47d9-ad59-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad59-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93435&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93435&amp;t=w&quot;,&quot;title&quot;:&quot;Spanish Cathedral at St. Augusine&quot;,&quot;index&quot;:13,&quot;image_id&quot;:&quot;93435&quot;},{&quot;id&quot;:&quot;510d47d9-ad5a-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-ad5a-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93436&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93436&amp;t=w&quot;,&quot;title&quot;:&quot;Zuñi, New Mexico&quot;,&quot;index&quot;:14,&quot;image_id&quot;:&quot;93436&quot;}],&quot;total&quot;:632,&quot;offset&quot;:0,&quot;fetchUrl&quot;:&quot;/items/41f2bdb0-c617-012f-3e66-58d385a7bc34/collection/captures.json&quot;,&quot;currentId&quot;:&quot;510d47d9-af24-a3d9-e040-e00a18064a99&quot;}">
+		<div class="carousel-widget-list-wrapper">
+			<ul class="carousel-widget-list" style="width:1800px;">
+					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad4b-a3d9-e040-e00a18064a99" data-image-id="93423"><img alt="A View on Castle Hill, Lincoln, England" src="http://images.nypl.org/index.php?id=93423&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad4c-a3d9-e040-e00a18064a99" data-image-id="93424"><img alt="Shakespeare&#x27;s Birthplace" src="http://images.nypl.org/index.php?id=93424&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad4d-a3d9-e040-e00a18064a99" data-image-id="93425"><img alt="Log House, East Downingtown, Pennsylvania" src="http://images.nypl.org/index.php?id=93425&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad4e-a3d9-e040-e00a18064a99" data-image-id="93426"><img alt="Log Cabin Near Darby, Pennsylvania" src="http://images.nypl.org/index.php?id=93426&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad50-a3d9-e040-e00a18064a99" data-image-id="93427"><img alt="The Norton House, Guilford, Connecticut." src="http://images.nypl.org/index.php?id=93427&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad51-a3d9-e040-e00a18064a99" data-image-id="93428"><img alt="First Moravian School in Pennsylvania, 1742" src="http://images.nypl.org/index.php?id=93428&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad52-a3d9-e040-e00a18064a99" data-image-id="93429"><img alt="Old House on Mill Island Near Bergen Beach, Long Island" src="http://images.nypl.org/index.php?id=93429&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad53-a3d9-e040-e00a18064a99" data-image-id="93430"><img alt="The Cathedral, City of Mexico" src="http://images.nypl.org/index.php?id=93430&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad54-a3d9-e040-e00a18064a99" data-image-id="93431"><img alt="The Cathedral, City of Mexico" src="http://images.nypl.org/index.php?id=93431&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad56-a3d9-e040-e00a18064a99" data-image-id="93433"><img alt="Altar of the Church of San Sebastian Y Santa Prisca" src="http://images.nypl.org/index.php?id=93433&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad55-a3d9-e040-e00a18064a99" data-image-id="93432"><img alt="Altar of the Church of San Sebastian Y Santa Prisca" src="http://images.nypl.org/index.php?id=93432&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad57-a3d9-e040-e00a18064a99" data-image-id="99047"><img alt="The Courtyard of the Casa De Los Azulejos, Mexico" src="http://images.nypl.org/index.php?id=99047&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad58-a3d9-e040-e00a18064a99" data-image-id="93434"><img alt="A Bit of Old St. Augustine" src="http://images.nypl.org/index.php?id=93434&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad59-a3d9-e040-e00a18064a99" data-image-id="93435"><img alt="Spanish Cathedral at St. Augusine" src="http://images.nypl.org/index.php?id=93435&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-ad5a-a3d9-e040-e00a18064a99" data-image-id="93436"><img alt="Zuñi, New Mexico" src="http://images.nypl.org/index.php?id=93436&t=b" /></a>
+</li>			</ul>
+		</div>
+		<a href="#" class="previous_page disabled">
+			<span>Previous</span>
+</a>		<a href="#" class="next_page">
+			<span>Next</span>
+</a>	</div>
+		<div class="links">
+				<a href="/items/510d47d9-af24-a3d9-e040-e00a18064a99/book?parent=41f2bdb0-c617-012f-3e66-58d385a7bc34#mode/2up" class="view-as-book">View as book</a>
+				<a href="/search/index?filters%5Btitle_uuid_s%5D%5B%5D=(Published photographs)%7C%7C41f2bdb0-c617-012f-3e66-58d385a7bc34&amp;keywords=&amp;layout=false">See all</a>
+		</div>
+</div>
+
+
+			<h3><a href="/search/index?filters%5Btitle_uuid_s%5D%5B%5D=Pageant of America&quot; Collection%7C%7C26818d00-c611-012f-a212-58d385a7bc34&amp;keywords=&amp;layout=false">Pageant of America&quot; Collection</a></h3>
+
+			
+<div class="carousel-widget-wrapper">
+	<div id="collection-carousel" class="carousel-widget" data-items="{&quot;items&quot;:[{&quot;id&quot;:&quot;510d47d9-aa27-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-aa27-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=92296&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=92296&amp;t=w&quot;,&quot;title&quot;:&quot;The Osberg ship, Viking relic, 8th century.&quot;,&quot;index&quot;:0,&quot;image_id&quot;:&quot;92296&quot;},{&quot;id&quot;:&quot;510d47d9-aa2a-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-aa2a-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=92297&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=92297&amp;t=w&quot;,&quot;title&quot;:&quot;Norse Ruins, Greenland.&quot;,&quot;index&quot;:1,&quot;image_id&quot;:&quot;92297&quot;},{&quot;id&quot;:&quot;510d47d9-aa28-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-aa28-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=92298&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=92298&amp;t=w&quot;,&quot;title&quot;:&quot;View from Brattahlid over Ericsfiord.&quot;,&quot;index&quot;:2,&quot;image_id&quot;:&quot;92298&quot;},{&quot;id&quot;:&quot;510d47d9-aa29-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-aa29-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=92299&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=92299&amp;t=w&quot;,&quot;title&quot;:&quot;A Greenland church.&quot;,&quot;index&quot;:3,&quot;image_id&quot;:&quot;92299&quot;},{&quot;id&quot;:&quot;510d47d9-aa2b-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-aa2b-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=92300&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=92300&amp;t=w&quot;,&quot;title&quot;:&quot;View of the Strait of Magellan.&quot;,&quot;index&quot;:4,&quot;image_id&quot;:&quot;92300&quot;},{&quot;id&quot;:&quot;510d47d9-aa2c-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-aa2c-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=92301&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=92301&amp;t=w&quot;,&quot;title&quot;:&quot;The Tree of the Doleful Night.&quot;,&quot;index&quot;:5,&quot;image_id&quot;:&quot;92301&quot;},{&quot;id&quot;:&quot;510d47d9-aa2d-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-aa2d-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=92302&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=92302&amp;t=w&quot;,&quot;title&quot;:&quot;Ruin of the Jamestown Church, built between 1676 and 1684.&quot;,&quot;index&quot;:6,&quot;image_id&quot;:&quot;92302&quot;},{&quot;id&quot;:&quot;510d47d9-aa2e-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-aa2e-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=92303&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=92303&amp;t=w&quot;,&quot;title&quot;:&quot;Scrooby Manor House as it is Today.&quot;,&quot;index&quot;:7,&quot;image_id&quot;:&quot;92303&quot;},{&quot;id&quot;:&quot;510d47d9-aa2f-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-aa2f-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=92304&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=92304&amp;t=w&quot;,&quot;title&quot;:&quot;Old Church at Austerfield.&quot;,&quot;index&quot;:8,&quot;image_id&quot;:&quot;92304&quot;},{&quot;id&quot;:&quot;510d47d9-aa30-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-aa30-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=92305&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=92305&amp;t=w&quot;,&quot;title&quot;:&quot;Early Plymouth.&quot;,&quot;index&quot;:9,&quot;image_id&quot;:&quot;92305&quot;},{&quot;id&quot;:&quot;510d47d9-aa31-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-aa31-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=92306&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=92306&amp;t=w&quot;,&quot;title&quot;:&quot;Interior of the Fort [Plymouth, Mass.].&quot;,&quot;index&quot;:10,&quot;image_id&quot;:&quot;92306&quot;},{&quot;id&quot;:&quot;510d47d9-acce-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-acce-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=107206&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=107206&amp;t=w&quot;,&quot;title&quot;:&quot;Ruins of Ogelthorpe&#x27;s Barracks at Frederica&quot;,&quot;index&quot;:11,&quot;image_id&quot;:&quot;107206&quot;},{&quot;id&quot;:&quot;510d47d9-acd0-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-acd0-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93360&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93360&amp;t=w&quot;,&quot;title&quot;:&quot;Old Habitant House&quot;,&quot;index&quot;:12,&quot;image_id&quot;:&quot;93360&quot;},{&quot;id&quot;:&quot;510d47d9-b1ef-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-b1ef-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=93359&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=93359&amp;t=w&quot;,&quot;title&quot;:&quot;Beaver dams&quot;,&quot;index&quot;:13,&quot;image_id&quot;:&quot;93359&quot;},{&quot;id&quot;:&quot;510d47d9-aa32-a3d9-e040-e00a18064a99&quot;,&quot;url&quot;:&quot;/items/510d47d9-aa32-a3d9-e040-e00a18064a99&quot;,&quot;thumb&quot;:&quot;http://images.nypl.org/index.php?id=92307&amp;t=b&quot;,&quot;src&quot;:&quot;http://images.nypl.org/index.php?id=92307&amp;t=w&quot;,&quot;title&quot;:&quot;El Morro Rock with Onate&#x27;s Inscription, 1606 [Detail].&quot;,&quot;index&quot;:14,&quot;image_id&quot;:&quot;92307&quot;}],&quot;total&quot;:7181,&quot;offset&quot;:0,&quot;fetchUrl&quot;:&quot;/items/26818d00-c611-012f-a212-58d385a7bc34/collection/captures.json&quot;,&quot;currentId&quot;:&quot;510d47d9-af24-a3d9-e040-e00a18064a99&quot;}">
+		<div class="carousel-widget-list-wrapper">
+			<ul class="carousel-widget-list" style="width:1800px;">
+					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-aa27-a3d9-e040-e00a18064a99" data-image-id="92296"><img alt="The Osberg ship, Viking relic, 8th century." src="http://images.nypl.org/index.php?id=92296&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-aa2a-a3d9-e040-e00a18064a99" data-image-id="92297"><img alt="Norse Ruins, Greenland." src="http://images.nypl.org/index.php?id=92297&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-aa28-a3d9-e040-e00a18064a99" data-image-id="92298"><img alt="View from Brattahlid over Ericsfiord." src="http://images.nypl.org/index.php?id=92298&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-aa29-a3d9-e040-e00a18064a99" data-image-id="92299"><img alt="A Greenland church." src="http://images.nypl.org/index.php?id=92299&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-aa2b-a3d9-e040-e00a18064a99" data-image-id="92300"><img alt="View of the Strait of Magellan." src="http://images.nypl.org/index.php?id=92300&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-aa2c-a3d9-e040-e00a18064a99" data-image-id="92301"><img alt="The Tree of the Doleful Night." src="http://images.nypl.org/index.php?id=92301&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-aa2d-a3d9-e040-e00a18064a99" data-image-id="92302"><img alt="Ruin of the Jamestown Church, built between 1676 and 1684." src="http://images.nypl.org/index.php?id=92302&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-aa2e-a3d9-e040-e00a18064a99" data-image-id="92303"><img alt="Scrooby Manor House as it is Today." src="http://images.nypl.org/index.php?id=92303&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-aa2f-a3d9-e040-e00a18064a99" data-image-id="92304"><img alt="Old Church at Austerfield." src="http://images.nypl.org/index.php?id=92304&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-aa30-a3d9-e040-e00a18064a99" data-image-id="92305"><img alt="Early Plymouth." src="http://images.nypl.org/index.php?id=92305&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-aa31-a3d9-e040-e00a18064a99" data-image-id="92306"><img alt="Interior of the Fort [Plymouth, Mass.]." src="http://images.nypl.org/index.php?id=92306&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-acce-a3d9-e040-e00a18064a99" data-image-id="107206"><img alt="Ruins of Ogelthorpe&#x27;s Barracks at Frederica" src="http://images.nypl.org/index.php?id=107206&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-acd0-a3d9-e040-e00a18064a99" data-image-id="93360"><img alt="Old Habitant House" src="http://images.nypl.org/index.php?id=93360&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-b1ef-a3d9-e040-e00a18064a99" data-image-id="93359"><img alt="Beaver dams" src="http://images.nypl.org/index.php?id=93359&t=b" /></a>
+</li>					<!-- Need to make this use the helper so it's restricted. render_linked_image(result_uuid, result_title=nil, thumb_image_id="noimage.png", restricted=false) -->
+					<li>
+						<a href="/items/510d47d9-aa32-a3d9-e040-e00a18064a99" data-image-id="92307"><img alt="El Morro Rock with Onate&#x27;s Inscription, 1606 [Detail]." src="http://images.nypl.org/index.php?id=92307&t=b" /></a>
+</li>			</ul>
+		</div>
+		<a href="#" class="previous_page disabled">
+			<span>Previous</span>
+</a>		<a href="#" class="next_page">
+			<span>Next</span>
+</a>	</div>
+		<div class="links">
+				<a href="/items/510d47d9-af24-a3d9-e040-e00a18064a99/book?parent=26818d00-c611-012f-a212-58d385a7bc34#mode/2up" class="view-as-book">View as book</a>
+				<a href="/search/index?filters%5Btitle_uuid_s%5D%5B%5D=Pageant of America&quot; Collection%7C%7C26818d00-c611-012f-a212-58d385a7bc34&amp;keywords=&amp;layout=false">See all</a>
+		</div>
+</div>
+
+	
+	
+</div>
+
+
+			
+		</div>
+		<div id="item-metadata">
+	<p></p><div class="meta-main">
+<h2>Item Details</h2>
+<dl>
+<dt><strong>Names</strong></dt>
+<dd>
+<a href="/search/index?filters%5BnamePart_mtxt_s%5D%5B%5D=Wurts%20Brothers&amp;keywords=&amp;layout=false">Wurts Brothers </a> (Photographer) 
+						    </dd>
+<dd>
+<a href="/search/index?filters%5BnamePart_mtxt_s%5D%5B%5D=McKim,%20Mead%20%26%20White&amp;keywords=&amp;layout=false">McKim, Mead &amp; White </a> (Architect) 
+						    </dd>
+<dt><strong>Collection</strong></dt>
+<dd>
+<p class="indent indent_0"><a href="/search/index?filters%5Btitle_uuid_s%5D%5B%5D=Pageant%20of%20America%22%20Collection%7C%7C26818d00-c611-012f-a212-58d385a7bc34&amp;keywords=&amp;layout=false">Pageant of America" Collection</a></p>
+<p class="indent indent_1"><a href="/search/index?filters%5Btitle_uuid_s%5D%5B%5D=v.13%20-%20The%20American%20spirit%20in%20architecture%7C%7C4193ab00-c617-012f-f9f3-58d385a7bc34&amp;keywords=&amp;layout=false">v.13 - The American spirit in architecture</a></p>
+<p class="indent indent_2"><a href="/search/index?filters%5Btitle_uuid_s%5D%5B%5D=(Published%20photographs)%7C%7C41f2bdb0-c617-012f-3e66-58d385a7bc34&amp;keywords=&amp;layout=false">(Published photographs)</a></p>
+</dd>
+<dt><strong>Library locations</strong></dt>
+<dd><a href="/search/index?filters%5BphysicalLocation_mtxt_s%5D%5B%5D=The%20Miriam%20and%20Ira%20D.%20Wallach%20Division%20of%20Art,%20Prints%20and%20Photographs:%20Photography%20Collection&amp;keywords=&amp;layout=false">The Miriam and Ira D. Wallach Division of Art, Prints and Photographs: Photography Collection</a></dd>
+<dt><strong>Topics</strong></dt>
+<dd><a href="/search/index?filters%5Bgeographic_mtxt_s%5D%5B%5D=New%20York%20(N.Y.)&amp;keywords=&amp;layout=false" title="New York (N.Y.) (LC/NACO authority file)">New York (N.Y.)</a></dd>
+<dd><a href="/search/index?filters%5BnamePart_mtxt_s%5D%5B%5D=Washington,%20George,%201732-1799&amp;keywords=&amp;layout=false" title="Washington, George, 1732-1799 (LC/NACO authority file)">Washington, George, 1732-1799</a></dd>
+<dd><a href="/search/index?filters%5Btopic_mtxt_s%5D%5B%5D=Monuments%20%26%20memorials&amp;keywords=&amp;layout=false" title="Monuments %26 memorials (Library of Congress Thesaurus for Graphic Materials)">Monuments &amp; memorials</a></dd>
+<dd><a href="/search/index?filters%5Btopic_mtxt_s%5D%5B%5D=Arches&amp;keywords=&amp;layout=false" title="Arches (Library of Congress Thesaurus for Graphic Materials)">Arches</a></dd>
+<dt><strong>Notes</strong></dt>
+<dd>Content: 
+		  McKim, Mead and White, architects.  Photograph by the Wurts Brothers.</dd>
+<dt><strong>Type of Resource</strong></dt>
+<dd><a href="/search/index?filters%5BtypeOfResource_mtxt_s%5D%5B%5D=still%20image&amp;keywords=&amp;layout=false">Still image</a></dd>
+<dt><strong>Identifiers</strong></dt>
+<dd>UUID: 
+		  b10a88d0-c617-012f-9429-58d385a7bc34</dd>
+</dl>
+</div>
+
+</div>
+	</div>
+
+
+
+
+</div>
+<div id="feedback" class="preload"></div>
+<script type="text/javascript">
+  var feedback_form = "\n  <div id=\'feedback-toggle\'>\n    <a href=\"javascript:void(0)\" class=\"open visible\">Feedback<\/a>\n    <a href=\"javascript:void(0)\" class=\"close\">Close<\/a>\n  <\/div>\n  <form method=\"post\" id=\"feedback-form\" data-remote=\"true\" onsubmit=\"this.action=\'/feedback/save_spreadsheet\'\" accept-charset=\"UTF-8\">\n\n      <input id=\"frompage\" name=\"frompage\" type=\"hidden\" value=\"/items/510d47d9-af24-a3d9-e040-e00a18064a99\" />\n      <h2 id=\'feedback-title\'>\n        <span class=\'step1\'>Feedback<\/span>\n        <span class=\'step2\'>Thank you!<\/span>\n      <\/h2>\n      <ul class=\'step1\'>\n        <li>\n          <input id=\'feedback-1\' type=\'radio\' value=\'1\' name=\'type\' checked=\'checked\'>\n          <label for=\'feedback-1\'>Suggest<\/label>\n        <\/li>\n        <li>\n          <input id=\'feedback-2\' type=\'radio\' value=\'2\' name=\'type\'>\n          <label for=\'feedback-2\'>Like<\/label>\n        <\/li>\n        <li>\n          <input id=\'feedback-3\' type=\'radio\' value=\'3\' name=\'type\'>\n          <label for=\'feedback-3\'>Dislike<\/label>\n        <\/li>\n        <li>\n          <input id=\'feedback-4\' type=\'radio\' value=\'4\' name=\'type\'>\n          <label for=\'feedback-4\'>Bug<\/label>\n        <\/li>\n      <\/ul>\n\n      <textarea id=\'feedback-text\' name=\'feedback_text\' data-placeholder=\'We want to hear from you! Enter your feedback here.\' data-error=\'Please leave a comment.\' maxlength=\'400\' class=\'step1\'><\/textarea>\n      <div id=\'feedback-counter\' class=\'step1\'>400<\/div>\n      <div class=\'controls step1\'>\n        <a href=\'javascript:void(0)\' class=\'button\' id=\'feedback-send\'>Send<\/a>\n      <\/div>\n\n      <div id=\'feedback-wait\'>\n        <span>Please wait...<\/span>\n      <\/div>\n\n      <p id=\'feedback-thanks\' class=\'step2\'>Thank you for helping the Library.<\/p>\n      <div class=\'controls step2\'>\n        <a href=\'javascript:void(0)\' class=\'button\' id=\'feedback-close\'>Close<\/a>\n      <\/div>\n  <\/form>\n\n\n";
+</script>
+
+
+<div id="footer">
+	<div class="content">
+
+		<ul>
+			<li><a href="http://shop.nypl.org/">The Library Shop</a></li>
+			<li><a href="http://www.nypl.org/help/about-nypl">About NYPL</a></li>
+			<li><a href="http://www.nypl.org/help/about-nypl/leadership/marx">President's Office</a></li>
+			<li><a href="http://www.nypl.org/help/computers-internet-and-wireless-access/reserving-computer">Reserve a PC</a></li>
+			<li><a href="http://www.nypl.org/spacerental">Space Rental</a></li>
+			<li><a href="http://www.nypl.org/help/about-nypl/careers-nypl">Careers at NYPL</a></li>
+			<li><a href="http://www.nypl.org/help/getting-oriented/resources-teachers">Resources for Teachers</a></li>
+		</ul>
+		
+		<ul>
+			<li><a href="http://www.nypl.org/eNews">E-Newsletters</a></li>
+			<li><a href="http://www.nypl.org/help/about-nypl/media-center">Media Center</a></li>
+			<li><a href="http://www.nypl.org/voices/connect-nypl">Connect with NYPL</a></li>
+			<li><a href="http://www.nypl.org/mobile-help">Mobile Apps</a></li>
+		</ul>
+		
+		<ul>
+			<li><a href="http://www.nypl.org/help/about-nypl/legal-notices/privacy-policy">Privacy Policy</a></li>
+			<li><a href="http://www.nypl.org/help/about-nypl/legal-notices/rules-and-regulations">Rules and Regulations</a></li>
+			<li><a href="http://www.nypl.org/help/computers-internet-and-wireless-access/a-safety-net-for-the-internet">Using the Internet</a></li>
+			<li><a href="http://www.nypl.org/help/about-nypl/legal-notices/website-terms-and-conditions">Website Terms and Conditions</a></li>
+			<li><a href="http://www.nypl.org/help/about-nypl/legal-notices/policy-gifts-materials">Gifts of Materials to NYPL</a></li>
+		</ul>
+		
+		<ul>
+			<li><a href="http://www.nypl.org/node/57438">Español</a></li>
+			<li><a href="http://www.nypl.org/node/107747">中文</a></li>
+			<li><a href="http://www.nypl.org/node/107749">русский</a></li>
+		</ul>
+		
+		<ul class="copyright"><li><span title="Copyright" class="copyright">&copy; The New York Public Library, 2013</span></li></ul>
+	</div>
+</div>
+
+
+
+<script type="text/javascript">if (!NREUMQ.f) { NREUMQ.f=function() {
+NREUMQ.push(["load",new Date().getTime()]);
+var e=document.createElement("script");
+e.type="text/javascript";
+e.src=(("http:"===document.location.protocol)?"http:":"https:") + "//" +
+  "js-agent.newrelic.com/nr-100.js";
+document.body.appendChild(e);
+if(NREUMQ.a)NREUMQ.a();
+};
+NREUMQ.a=window.onload;window.onload=NREUMQ.f;
+};
+NREUMQ.push(["nrfj","beacon-1.newrelic.com","f8d2b656b5","2541497","dl4MQUJaXV4EFBsNEFBcERpZW1VXGQ==",0,380,new Date().getTime(),"","","","",""]);</script><script type="text/javascript">
+//<![CDATA[
+(function() {
+var _analytics_scr = document.createElement('script');
+_analytics_scr.type = 'text/javascript'; _analytics_scr.async = true; _analytics_scr.src = '/_Incapsula_Resource?SWJIYLWA=2977d8d74f63d7f8fedbea018b7a1d05&ns=1';
+var _analytics_elem = document.getElementsByTagName('script')[0]; _analytics_elem.parentNode.insertBefore(_analytics_scr, _analytics_elem);
+})();
+// ]]>
+</script></body>
+</html>
