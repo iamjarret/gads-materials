@@ -10,9 +10,9 @@
 
 	<imageslide title="Could we have found the best model quicker?" image='modelsubsets1.png' />
 
-	<imageslide title="All derivative models that start with a good feature do well" image='modelsubsets2.png'/>
+	<imageslide title="Derivative models that start with good features do well" image='modelsubsets2.png'/>
 
-	<imagesslide title="All derivative models that start with a good feature do well" image='modelsubsets3.png'/>
+	<imagesslide title="Derivative models that start with good features do well" image='modelsubsets3.png'/>
 
 	<codeslide title="Pseudo Code: Naive Model Search Algorithm">
 		<codeblock>
@@ -37,7 +37,7 @@
 			<l focus="1">8. Save the best features</l>
 			<l focus="1">9. Consider only three feature models that contain the best two!</l>
 			<l focus="1">Repeat!</l>
-			<l focus="1">Stop when the MSE gets worse when any new feature is added</l>
+			<l focus="1">Stop when the MSE gets worse with any added feature</l>
 		</codeblock>
 	</codeslide>
 
