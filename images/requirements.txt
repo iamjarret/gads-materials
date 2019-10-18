@@ -11,7 +11,7 @@ chardet==2.0.1
 decorator==3.4.0
 distribute==0.6.37
 dst==0.1.5
-ecdsa==0.11
+ecdsa==0.13.3
 html5lib==0.95
 ipython==0.13.2
 joblib==0.7.0
