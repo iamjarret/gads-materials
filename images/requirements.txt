@@ -43,7 +43,7 @@ statsmodels==0.4.2
 sympy==0.7.2
 tables==2.4.0
 tornado==2.4.1
-urllib3==1.6
+urllib3==1.26.5
 wsgiref==0.1.2
 xlrd==0.9.2
 xlwt==0.7.4
